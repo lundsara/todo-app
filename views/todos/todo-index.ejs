@@ -1,0 +1,43 @@
+
+<title>Todo app!!!!!</title>
+ <link rel='stylesheet' type='text/css' href='/Style/style.css'>
+
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Open+Sans:300i,400" rel="stylesheet">
+</head>
+<body>
+<div id='box'>
+
+<main>
+
+<div> Welcome to my Todo App! </div>
+   <input type="text" id="todo" placeholder="Please Enter Todo">
+  <button class="btn" id="add"> Add</button>
+  <main>
+
+ <div class='todo'>
+<p><%=data.title%></p>
+<p><%=data.status%></p>
+<p><%=data.category%></p>
+</div>
+
+   </main>
+
+
+<a href="/todos/add">Add New Todo</a>
+<% for (let todos of data) { %>
+<div class = 'todo'>
+  <p><%= todos.title %><p>
+  <p><%= todos.status %><p>
+  <p><%= todos.category %><p>
+  <a href = '/todos/<%= todos.id%>'>Info</a>
+</div>
+<form action="/todos/<%= todos.id %>?_method=Delete " method="Post">
+  <input type="Submit" value="Delete"/>
+  </form>
+<% } %>
+
+<% include ../partials/footer.ejs %>
+
+
+</body>
+</html>
