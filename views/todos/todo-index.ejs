@@ -1,18 +1,17 @@
-
+<% include ../partials/boilerplate.ejs %>
 <title>Todo app!!!!!</title>
  <link rel='stylesheet' type='text/css' href='/Style/style.css'>
 
   <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Open+Sans:300i,400" rel="stylesheet">
 </head>
 <body>
-<div id='box'>
 
+<div id='box'>
+<% include ../partials/header.ejs %>
 <main>
 
 <div> Welcome to my Todo App! </div>
-   <input type="text" id="todo" placeholder="Please Enter Todo">
-  <button class="btn" id="add"> Add</button>
-  <main>
+
 
  <div class='todo'>
 <p><%=data.title%></p>

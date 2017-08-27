@@ -12,7 +12,7 @@ Todo.findById = (id) => {
     WHERE id = $1
   `, [id]);
 }
-Todo.create = (todo) => {
+Todo.create = todos => {
   return db.one(
     `
       INSERT INTO todos
@@ -20,7 +20,7 @@ Todo.create = (todo) => {
       VALUES ($1, $2, $3)
       RETURNING *
     `,
-    [todo.title, todo.status, todo.category]
+    [todos.title, todos.status, todos.category]
   );
 };
 Todo.update = (todo, id) => {

@@ -7,11 +7,39 @@
   flex-direction: column;
   justify-content: center;
   font-family: 'Baloo Bhaijaan', cursive;
-  width: 400px;
+ max-width: 1280px;
   text-align: center;
    margin: 0 auto;
    margin-top: 10px;
 
 
+}
+li {
+  font-family: 'Baloo Bhaijaan', cursive;
+  display: inline;
+  background-color: lavender;
+  margin: 10px;
+  padding: 10px 30px;
+}
+
+ul {
+  list-style: none;
+  text-align: right;
+
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: auto;
+  background: black;
+  padding: 2% 3%;
+}
+
+footer {
+  margin-top: 1280px;
+  font-family: 'Baloo Bhaijaan', cursive;
+  background: black;
+  color: white;
+  padding: 2% 3%;
 }
 

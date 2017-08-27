@@ -17,7 +17,7 @@ todosController.index = (req, res) => {
 todosController.show = (req, res) => {
   Todo.findById(req.params.id)
     .then(todos => {
-      res.render('todos/todo-index',{
+      res.render('todos/todo-info',{
         message: 'ok',
         data: todos,
       });
@@ -31,10 +31,9 @@ todosController.create = (req, res) => {
       title: req.body.title,
       status: req.body.status,
       category: req.body.category,
-     }).then(todos => {
-      res.render('./todos/todo-add', {
-        data: todos,
-      });
+     }).then(() => {
+    // so did this one
+    res.redirect('/todos');
     // res.redirect('/todos');
   }).catch(err => {
     console.log(err);
@@ -61,9 +60,9 @@ todosController.update = (req, res) => {
 todosController.delete = (req, res) => {
   Todo.destroy(req.params.id)
     .then(() => {
-      res.json({
-        message: 'Todo deleted successfully!',
-      });
+      res.redirect('/todos');
+
+
     }).catch(err => {
       console.log(err);
       res.status(500).json(err);

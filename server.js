@@ -5,6 +5,7 @@ const path = require('path')
 const methodOverride = require('method-override')
 app.use(methodOverride('_method'))
 
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
@@ -16,7 +17,7 @@ app.use(express.static('public'));
 // app.use(express.static(__dirname + "/public"));
 
 app.get('/',(req,res)=>{
-  res.render('todos/todo-index');
+  res.render('todos/homepage');
 });
 
 

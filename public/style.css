@@ -15,5 +15,17 @@
 
 }
 
+ul {
+  list-style: none;
+  text-align: right;
+
+}
 
 
+li {
+  font-family: 'Raleway', sans-serif;
+  display: inline;
+  background-color: lightyellow;
+  margin: 10px;
+  padding: 10px 30px;
+}
