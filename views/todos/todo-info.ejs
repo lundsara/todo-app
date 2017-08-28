@@ -1,10 +1,10 @@
 <% include ../partials/boilerplate %>
 <% include ../partials/header.ejs %>
 
-<div class='todo>'
-<p><%= data.title %><p>
-<p><%= data.status %></p>
-<p><%= data.category %></p>
+<div class='todos'>
+<div><%= data.title %></div>
+<div><%= data.status %></div>
+<div><%= data.category %></div>
 <a href= '/todos/'> See all todos</a>
 </div>
 <% include ../partials/footer.ejs %>
