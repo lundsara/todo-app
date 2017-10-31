@@ -1,3 +1,16 @@
-# todo-app
+# My Todo-App
 
-my todo app: https://git.generalassemb.ly/lundsara/todo-app
+Here is a simple CRUD app to keep track of your todo list!
+
+Technologies Used:
+
+Javascript
+HTML5
+CSS3
+Node.js
+Express.js
+
+
+![screenshot](https://i.imgur.com/vM7RXaX.png)
+
+
